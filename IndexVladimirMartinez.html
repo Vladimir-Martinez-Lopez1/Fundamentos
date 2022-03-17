@@ -13,20 +13,153 @@
     //empezando con JS ******
     let entero = 4;
     let flotante = 3.14;
-    let cadena = "Hola Mundo"
-    
+    let cadena = "Hola Mundo";
+    let boleano = true;
     console.log(entero);
     console.log(flotante);
     console.log(cadena);
+    console.log(boleano!=0);
     console.log(typeof(entero));
     console.log(typeof(flotante));
     console.log(typeof(cadena));
+    console.log(typeof(boleano));
     /*
     let 2myvar = "John";
     let my-var = "John";
     let my var = "John";
     estos no son nombres de variables validos
     */
+
+    let x = "JS";
+    let y = "is";
+    let z = "awesome";
+    console.log( x + " " + y + " "+ z);
+
+    /*las comillas indican los espacios 
+    que deberan quedar entre cada palabra*/
+
+    //este es el comando length, usado para contar la longitud de cadenas.
+    let conteo = "Hola, soy estudiante de la escuela de ciencias, esta es mi primera practica";
+    console.log(conteo.length);
+    console.log(conteo);
+    let conteo2 = "este mensaje es mas grande";
+    console.log(conteo2.length);
+    console.log(conteo2);
+    let conteo3 = "estudiante";
+    console.log(conteo3.length);
+    console.log(conteo3);
+
+    /*Prueba cada uno de los ejercicios boleanos*/
+    console.log("esta es una expresion voleana");
+    console.log(10>9);
+    
+    let indefinido;
+    let nulo = null;
+    let cero = 0;
+    let vacio = "";
+
+    console.log(indefinido);
+    console.log(nulo);
+    console.log(cero);
+    console.log(vacio);
+    //esta es una prueba de los boleanos
+    console.log("evaluando los valores boleanos")
+    console.log(indefinido<1);
+    console.log(nulo<1);
+    console.log(cero<1);
+    console.log(vacio<1);
+
+
+
+    /*diferencia entre undefined y null*/
+
+    /*undefind es una variable no inicializada,
+    al que JS le asigna el valor undefind porque detecta que no tiene valor*/
+
+    //null es una variable a la que le asignamos un valor 0 intencionalmente   
+
+
+
+    /*
+    Escribe un sentencia por cada uno de los operadores y ejecutalo en el navegador
+    */
+    //aritmetico
+    console.log("este es un operador aritmetico");
+    console.log(5+10);
+    //asignacion
+    let asigna = 5;
+    asigna +=20;
+    console.log("este es un operador de asignacion");
+    console.log(asigna);
+    //comparacion
+    console.log("este es un operador de comparacion");
+    let comp1 = 10;
+    let comp2 = 20;
+    let boleano1 = comp1<comp2;
+    console.log("10<20 :",boleano1);
+    //logicos
+    console.log("este es un operador logico");
+    let com1 = 10;
+    let com2 = 20;
+    let com3 = 5;
+    let com4 = 2;
+    let boleano2 = comp1<comp2 && com3<com4;
+    console.log("10<20 y 5<2 :",boleano2);
+    //comparacion
+    console.log("este es un operador de comparacion");
+    let compar1 = 20;
+    let compar2 = 40;
+    let compar3 = 8;
+    let compar4 = 20;
+    let boleano3 = compar1<compar2 | compar3<compar4;
+    console.log("10<20 o 5<2 :",boleano3);
+    
+
+    //Ejercicios
+    /*
+    1. Cree una variable llamada z, asígnele x + y y muestre el resultado.
+    x = 5
+    y = 10
+    */
+    let x1 = 5;
+    let y1 = 10;
+    let z1 = x1+y1;
+    console.log("el resultado de z es:", z1);
+
+    /*
+    2. Elimina los caracteres ilegales en el nombre de la variable:
+    MyFirstName = "John"
+    */
+
+    let MyFirstName = "John";
+    console.log("este es el nombre gurdado en la varibale correctamnte declarada");
+    console.log(MyFirstName);
+
+    /*
+    3. El siguiente ejemplo de código imprimiría el tipo de datos de x, ¿qué tipo de datos sería?
+    x = 20.5
+    console.log(typeof(x))
+    */
+
+    let x3 = 20.5;
+    console.log(typeof(x3));
+    console.log(x3);
+    console.log("este en particular es un valor flotante, pero la consola lo maneja como numerico");
+
+
+    /*
+    4. Utiliza el método length para imprimir la longitud de la cadena, ¿que valor da? 11
+    x = "Hello World"
+    console.log(x.length)
+    */
+
+    let cadena4 = "Hello word";
+    console.log(cadena4.length);
+    //para que de 11 caracteres podriamos agregar un signo de exclamacion
+    let cadena5 = "Hello Word!"
+    console.log(cadena5.length);
+
+
 
 </script>   
 </body>
