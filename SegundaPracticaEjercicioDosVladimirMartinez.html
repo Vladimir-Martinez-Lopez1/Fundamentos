@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexVladimirMartinez.html</title>
+</head>
+<body>
+    <h1>Segunda practica utilizando JS ejercicio 2</h1>
+    <p>Los resultados se mostraran en consola.</p>
+    <script>
+
+        //La formula cuadratica es
+        //Declaracion de variables
+
+
+        let num1 = prompt("Ingresa el valor de a");
+        let num2 = prompt("Ingresa el valor de b");
+        let num3 = prompt("Ingresa el valor de c");
+
+        let a = parseFloat(num1);
+        let b = parseFloat(num2);
+        let c = parseFloat(num3);
+        let d = b*b-4.0*a*c;
+
+        //inicio de la sentencia if
+
+        if (d<0) {
+            d=-d;
+            alert("soluciones imaginarias")
+            
+        }
+        else
+            alert("soluciones reales")
+        
+        if (a!=0) {
+
+            let x1 = (-b+Math.sqrt(d))/2.0/a;
+            let x2 = (-b-Math.sqrt(d))/2.0/a;
+
+            console.log("El resultado de x1 es: "+x1);
+            console.log("El resultado de x2 es: "+x2);
+        }
+        else 
+            {
+                let x1 = 0;
+                let x2 = 0;
+                alert("No es una ecuacion cuadratica");
+            }
+
+            
+    </script>
+    
+</body>
+</html>
