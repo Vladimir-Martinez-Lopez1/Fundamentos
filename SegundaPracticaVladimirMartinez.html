@@ -8,7 +8,45 @@
 </head>
 <body>
     <h1>Segunda practica utilizando JS</h1>
+    <p>Los resultados se mostraran en consola.</p>
     <script>
+        //Declaracion de varibles
+        let opcion = prompt("Selecciona la opcion a realizar: \n 1. suma \n 2. resta \n 3. division \n 4. multiplicacion ")
+        let op = parseInt(opcion);
+
+        //Uilice un switch para poner las opciones y que fuera mas inuitivo.
+        switch (op) {
+            case 1:
+            let num1 = prompt("Ingresa el primer número");
+            let num2 = prompt("Ingresa el segundo número");
+            let sum = parseFloat(num1) + parseFloat(num2);
+            console.log("El resultado de la suma es: "+ sum);
+                break;
+            case 2:
+            let num3 = prompt("Ingresa el primer número");
+            let num4 = prompt("Ingresa el segundo número");
+            let res = parseFloat(num3) - parseFloat(num4);
+            console.log("El resultado de la resta es: "+ res);
+                break;
+            case 3:
+            let num5 = prompt("Ingresa el primer número");
+            let num6 = prompt("Ingresa el segundo número");
+            let divi = parseFloat(num5) / parseFloat(num6);
+            console.log("El resultado de la división es: "+ divi);
+                break;
+            case 4:
+            let num7 = prompt("Ingresa el primer número");
+            let num8 = prompt("Ingresa el segundo número");
+            let mult = parseFloat(num7) * parseFloat(num8);
+            console.log("El resultado de la multiplicación es: "+ mult);
+                break;
+            default:
+                
+        }
+
+        //Opcion de operacion
+
+
 
         
     </script>
