@@ -7,14 +7,14 @@
     <title>IndexVladimirMartinez.html</title>
 </head>
 <body>
-    <h1>Segunda practica utilizando JS Ejercicio 1</h1>
+    <h1>Segunda practica utilizando JS Ejercicios 1 y 2</h1>
     <p>Los resultados se mostraran en consola.</p>
     <script>
         //Declaracion de varibles
-        let opcion = prompt("Selecciona la opcion a realizar: \n 1. suma \n 2. resta \n 3. division \n 4. multiplicacion \n 5. formula cuadratica ")
+        let opcion = prompt("Selecciona la opcion a realizar: \n 1. suma \n 2. resta \n 3. division \n 4. multiplicacion \n 5. formula cuadratica \n 6. Probar calculadora con valores establecidos")
         let op = parseInt(opcion);
 
-        //Uilice un switch para poner las opciones y que fuera mas inuitivo.
+        //Uilice un switch para poner las opciones y que fuera mas intuitivo.
         switch (op) {
             case 1:
             let num1 = prompt("Ingresa el primer número");
@@ -45,37 +45,43 @@
             let num9 = prompt("Ingresa el valor de a");
             let num10 = prompt("Ingresa el valor de b");
             let num11= prompt("Ingresa el valor de c");
-
+        //para evitar confundirme utilice la variable d para simplificar la formula de la cuadratica.
             let a = parseFloat(num9);
             let b = parseFloat(num10);
             let c = parseFloat(num11);
-            let d = b*b-4.0*a*c;
-
-        //inicio de la sentencia if
-
-            if (d<0) {
-            d=-d;
-            alert("soluciones imaginarias")
-            
-            }
-            else
-            alert("soluciones reales")
-        
-            if (a!=0) {
+            let d = b*b-4.0*a*c;       
 
             let x1 = (-b+Math.sqrt(d))/2.0/a;
             let x2 = (-b-Math.sqrt(d))/2.0/a;
 
             console.log("El resultado de x1 es: "+x1);
-            console.log("El resultado de x2 es: "+x2);
-             }
-            else 
-            {
-                let x1 = 0;
-                let x2 = 0;
-                alert("No es una ecuacion cuadratica");
-            }
+            console.log("El resultado de x2 es: "+x2);           
+        
             break;
+
+            case 6:
+                let numero1 = 12;
+                let numero2 = 33;
+                let variableA = 1;
+                let variableB = -7;
+                let variableC = -18;
+                
+                let suma = numero1 + numero2;
+                let resta = numero1 - numero2;
+                let multipli = numero1 * numero2;
+                let divisi = numero1 / numero2;
+
+                let raiz1 = (-variableB + Math.sqrt(variableB*variableB - 4*variableA*variableC))/ 2*variableA;
+                let raiz2 = (-variableB - Math.sqrt(variableB*variableB - 4*variableA*variableC))/ 2*variableA;
+
+                console.log("El resultado de la suma es: " + suma);
+                console.log("El resultado de la resta es: " + resta);
+                console.log("El resultado de la multiplicacion es: " + multipli);
+                console.log("El resultado de la division es: " + divisi);
+                console.log("El resultado de la raiz 1 es: " + raiz1);
+                console.log("El resultado de la raiz 2 es: " + raiz2);
+
+                break;
             default:
 
                 
