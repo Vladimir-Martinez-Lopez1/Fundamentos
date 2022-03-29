@@ -11,7 +11,7 @@
     <p>Los resultados se mostraran en consola.</p>
     <script>
         //Declaracion de varibles
-        let opcion = prompt("Selecciona la opcion a realizar: \n 1. suma \n 2. resta \n 3. division \n 4. multiplicacion ")
+        let opcion = prompt("Selecciona la opcion a realizar: \n 1. suma \n 2. resta \n 3. division \n 4. multiplicacion \n 5. formula cuadratica ")
         let op = parseInt(opcion);
 
         //Uilice un switch para poner las opciones y que fuera mas inuitivo.
@@ -40,12 +40,48 @@
             let mult = parseFloat(num7) * parseFloat(num8);
             console.log("El resultado de la multiplicación es: "+ mult);
                 break;
+         
+            case 5:
+            let num9 = prompt("Ingresa el valor de a");
+            let num10 = prompt("Ingresa el valor de b");
+            let num11= prompt("Ingresa el valor de c");
+
+            let a = parseFloat(num9);
+            let b = parseFloat(num10);
+            let c = parseFloat(num11);
+            let d = b*b-4.0*a*c;
+
+        //inicio de la sentencia if
+
+            if (d<0) {
+            d=-d;
+            alert("soluciones imaginarias")
+            
+            }
+            else
+            alert("soluciones reales")
+        
+            if (a!=0) {
+
+            let x1 = (-b+Math.sqrt(d))/2.0/a;
+            let x2 = (-b-Math.sqrt(d))/2.0/a;
+
+            console.log("El resultado de x1 es: "+x1);
+            console.log("El resultado de x2 es: "+x2);
+             }
+            else 
+            {
+                let x1 = 0;
+                let x2 = 0;
+                alert("No es una ecuacion cuadratica");
+            }
+            break;
             default:
+
                 
         }
 
-        //Opcion de operacion
-
+   
 
 
         
