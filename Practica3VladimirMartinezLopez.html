@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexVladimirMartinezLopez</title>
+</head>
+<body>
+    <h1>Tercera practica utilizando JS</h1>
+    <p>Los resultados se visualizan en consola</p>
+<script>
+
+    let num1 = prompt("Ingresa el primer número");
+    let op = prompt("Ingresa el operador \n las opciones a elegir son + - * /");
+    let num2 = prompt("Ingresa el segundo número");
+    if(op == ('+') | op==('-') | op == ('*') | op == ('/')){
+    if (op == '+') {
+        let sum = parseFloat(num1) + parseFloat(num2);
+        console.log("El resultado de la suma entre " + num1, "y " + num2, "es: "+ sum);
+    }
+    if (op == '-') {
+        let res = parseFloat(num1) - parseFloat(num2);
+        console.log("El resultado de la resta entre " + num1, "y " + num2, " es: "+ res);
+    }
+    if (op == '*') {
+        let mul = parseFloat(num1) * parseFloat(num2);
+        console.log("El resultado de la multiplicacion entre " + num1, "y " + num2, " es: "+ mul);
+    }
+    if (op == '/') {
+        let divi = parseFloat(num1) / parseFloat(num2);
+        console.log("El resultado de la division entre " + num1, "y " + num2, " es: "+ divi);
+    }
+}
+    else{
+        window.alert("Operador invalido");
+    }
+  
+
+</script>
+</body>
+</html>
