@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndexVladimirMartinezLopez</title>
+</head>
+<body>
+    <h1>Cuarta practica utilizando JS</h1>
+    <p>Los resultados se visualizan en consola</p>
+<script>
+
+
+    let opc = prompt("Ingresar a la actividad  \n 1 o 2 ");
+    if (opc==1){
+    
+    let condicion = 0;
+while(condicion===0)
+    {
+    let num1 = prompt("Ingresa el primer número");
+    let op = prompt("Ingresa el operador \n las opciones a elegir son +, -, *, /, %, **");
+    let num2 = prompt("Ingresa el segundo número");
+  
+
+       
+    
+    if(op == ('+') | op==('-') | op == ('*') | op == ('/')| op == ('%')| op == ('**')){
+    if (op == '+') {
+        let sum = parseFloat(num1) + parseFloat(num2);
+        console.log("El resultado de la suma entre " + num1, "y " + num2, "es: "+ sum);
+        }
+    else if (op == '-') {
+        let res = parseFloat(num1) - parseFloat(num2);
+        console.log("El resultado de la resta entre " + num1, "y " + num2, " es: "+ res);
+        }
+    else if (op == '*') {
+        let mul = parseFloat(num1) * parseFloat(num2);
+        console.log("El resultado de la multiplicacion de " + num1, "y " + num2, " es: "+ mul);
+        }
+    else if (op == '/') {
+        let divi = parseFloat(num1) / parseFloat(num2);
+        console.log("El resultado de la division entre " + num1, "y " + num2, " es: "+ divi);
+        }
+    else if (op == '%') {
+        let modu = parseFloat(num1) % parseFloat(num2);
+        console.log("El resultado del modulo de " + num1, "y " + num2, " es: "+ modu);
+        }
+    else if (op == '**') {
+        let divi = parseFloat(num1) ** parseFloat(num2);
+        console.log("El resultado de la exponenciacion de " + num1, "y " + num2, " es: "+ divi);
+        }
+    }
+    else{
+        window.alert("Operador invalido");
+        }
+
+        let pregunta = prompt("Desea hacer otra operacion \n s/n");
+        if(pregunta=="n"){
+            condicion = 1;
+            break;
+        }
+ 
+}
+}
+else if(opc==2){
+
+/*
+1) Programa una función que cuente el número de caracteres de una 
+cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+*/
+
+function contar(cadena = ""){
+    if(!cadena){
+        window.alert("no ingreso ninguna cadena");
+    }
+    else{
+        console.log(`la cadena "${cadena}" tiene ${cadena.length} caracteres`)
+    }
+}
+
+
+/*
+2) Programa una función que te devuelva el texto recortado según el 
+número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+*/
+function recortado(cadena="", longitud=0){
+    if(!cadena){
+        window.alert("No se ingreso el texto");
+    }
+    else{
+        console.log(`la cadena "${cadena}" con el recorte de caracteres queda: ${cadena.slice(0, longitud)}`)
+    }
+}
+
+
+/*
+3) Programa una función que dada una String te devuelva un Array de textos 
+separados por cierto caracter, pe. miFuncion('hola que tal', ' ') 
+devolverá ['hola', 'que', 'tal'].
+*/
+function arreglo(cadena ="", separador = undefined){
+    if(separador==undefined){
+        window.alert("no se ingresaron parametros correctos");
+    }
+    else{
+        console.log(cadena.split(separador));
+    }
+}
+
+
+
+/*
+4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3)
+devolverá Hola Mundo Hola Mundo Hola Mundo.
+*/
+
+function repetir(cadena = "",veces = undefined){
+    if(veces == undefined) {
+         window.alert("no se ingreso un valor correcto")
+    }
+    else{
+         for (let vez = 1; vez <= veces; vez++) {
+        console.log(`${cadena}, ${vez}`)
+         }
+    }
+}
+
+//Uilice un switch para poner las opciones y que fuera mas intuitivo.
+let opcion = prompt("Seleccionar la actividad: \n 1. numero de caracteres \n 2. Recortar texto \n 3. String en Array \n 4. Repeticion de texto");
+let op = parseInt(opcion);
+
+      
+        switch (op) {
+            case 1:
+                contar("Hola Mundo");
+                break;
+            case 2:
+                recortado("hola mundo",2);
+                break;
+            case 3:
+                arreglo("hola que tal", " ")
+                break;
+            case 4: 
+                repetir("hola mundo",3)
+                break;
+        }
+}
+else if((opc!=1)&&(opc!=2)){
+    window.alert("Ejercicio invalido");
+}
+
+
+</script>
+</body>
+</html>
