@@ -75,7 +75,7 @@ function contar(cadena = ""){
         window.alert("no ingreso ninguna cadena");
     }
     else{
-        console.log(`la cadena "${cadena}" tiene ${cadena.length} caracteres`)
+        console.log(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
     }
 }
 
@@ -117,17 +117,91 @@ devolverá Hola Mundo Hola Mundo Hola Mundo.
 
 function repetir(cadena = "",veces = undefined){
     if(veces == undefined) {
-         window.alert("no se ingreso un valor correcto")
+         window.alert("no se ingreso un valor correcto");
     }
     else{
          for (let vez = 1; vez <= veces; vez++) {
-        console.log(`${cadena}, ${vez}`)
+        console.log(`${cadena}, ${vez}`);
          }
     }
 }
 
+/*5) Programa una función que invierta las palabras de una
+cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+*/
+
+function invertir(cadena = ""){
+    if(!cadena) {
+         window.alert("no se ingreso una cadena correcta");
+    }
+    else{
+         
+        console.log(cadena.split("").reverse().join(""));
+         
+    }
+}
+
+/*
+6) Programa una función para contar el número de veces que se
+repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") 
+devolverá 2.
+*/
+function contando(cadena="", texto=""){
+    if(!cadena) {
+         window.alert("no se ingreso un texto correcto, ya que no tiene repeticiones");
+    }
+    else{
+        
+        let pa = 0;
+        pala=0;
+        
+        
+        while(pa !== -1){
+            pa = cadena.indexOf(texto, pa);
+            if(pa !==-1){
+                pa++;
+                pala++;
+            }
+        }
+        console.log(`En el texto la palabra ${texto}, se repite una cantidad de ${pala}, vez`);
+         
+    }
+}
+
+/*
+7) Programa una función que valide si una palabra o frase dada, 
+es un palíndromo (que se lee igual en un sentido que en otro), 
+pe. mifuncion("Salas") devolverá true.
+*/
+function palindro(cadena=""){
+    if(!cadena) {
+         window.alert("no se ingreso un texto correcto");
+    }
+    else{
+        cadena = cadena.toLowerCase();
+        let invertido = cadena.split("").reverse().join("");  
+        if(cadena===invertido)console.log(`la palabra ${cadena}, si es un palindormo`);
+         
+    }
+}
+
+/*
+8) Programa una función que elimine cierto patrón de caracteres
+de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") 
+devolverá  "1, 2, 3, 4 y 5.
+*/
+function eliminar(cadena = "", patron=""){
+    if(!cadena) {
+         window.alert("no se ingreso un texto correcto");
+    }
+    else{
+          
+        console.log(cadena.replace(new RegExp(patron, "ig"),""));
+         
+    }
+}
 //Uilice un switch para poner las opciones y que fuera mas intuitivo.
-let opcion = prompt("Seleccionar la actividad: \n 1. numero de caracteres \n 2. Recortar texto \n 3. String en Array \n 4. Repeticion de texto");
+let opcion = prompt("Seleccionar la actividad: \n 1. numero de caracteres \n 2. Recortar texto \n 3. String en Array \n 4. Repeticion de texto \n 5. Invertir cadena \n 6. Contar la repeticion de una palabra \n 7. Validar un palindromo \n 8. Eliminar texto y dejar numeros");
 let op = parseInt(opcion);
 
       
@@ -139,10 +213,22 @@ let op = parseInt(opcion);
                 recortado("hola mundo",2);
                 break;
             case 3:
-                arreglo("hola que tal", " ")
+                arreglo("hola que tal", " ");
                 break;
             case 4: 
-                repetir("hola mundo",3)
+                repetir("hola mundo",3);
+                break;
+            case 5:
+                invertir("Hola mundo");
+                break;
+            case 6:
+                contando("Hola Mundo adios mundo", "mundo");
+                break;
+            case 7:
+                palindro("salas");
+                break;
+            case 8: 
+                eliminar("xyz1, xyz2, xyz3, xyz4 y xyz5","xyz");
                 break;
         }
 }
